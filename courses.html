@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Courses &amp; Training | BUILT TO CREATE
+  </title>
+  <style id="standalone-site-fallback">
+/* Fallback site theme: used when this test HTML is opened without style.css.
+   The real site's stylesheet, when present, loads AFTER these defaults. */
+:root{color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#071626;color:#eef5ff;font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+button:focus-visible,a:focus-visible{outline:2px solid #9bcaff;outline-offset:3px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 4vw;background:#071626;border-bottom:1px solid #355775;position:relative;z-index:5}
+.nav .logo{font-size:21px;font-weight:900;letter-spacing:.08em;line-height:1.1;white-space:nowrap}
+.nav .logo span{color:#80b8ff}
+.nav .logo small{display:block;font-size:9px;letter-spacing:.17em;color:#a8c0d7;margin-top:7px}
+.nav nav{display:flex;align-items:center;gap:clamp(12px,2vw,32px);font-size:13px;font-weight:700}
+.nav nav a:hover{color:#83baff}
+.nav nav .quote,.primary{display:inline-block;background:#78b5ff;color:#06172a;padding:13px 18px;font-size:12px;font-weight:900;letter-spacing:.035em}
+.nav nav .quote:hover,.primary:hover{background:#a6d1ff;color:#06172a}
+#menu{display:none;background:transparent;color:#fff;border:1px solid #557b9d;padding:6px 11px;cursor:pointer}
+.eyebrow{color:#91bfff;font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase}
+h1,h2,h3,p{overflow-wrap:break-word}
+h1,h2,h3{line-height:1.12}
+h1{font-size:clamp(37px,5.8vw,84px);letter-spacing:-.05em;margin:16px 0 22px}
+h2{font-size:clamp(30px,3.8vw,54px);letter-spacing:-.04em;margin:15px 0 22px}
+h3{font-size:24px}
+h1 em,h2 em{font-style:normal;color:#80b8ff}
+.course-hero{color:#edf5ff}
+.course-hero>p:not(.eyebrow){color:#c0d2e5;max-width:780px;font-size:17px;margin-bottom:26px}
+.course-wrap{color:#edf5ff}
+.course-card,.course-panel{color:#edf5ff}
+.course-card .lead{font-size:20px;color:#f0f6ff}
+.course-panel .price{font-size:clamp(30px,3vw,45px);font-weight:900;margin:14px 0 25px}
+.course-panel .price span{font-size:15px;font-weight:400;color:#c2d3e6}
+.course-panel p{margin:15px 0}
+.course-panel .primary{margin-top:15px}
+.syllabus article{background:#0c233a}
+.syllabus h3{font-size:17px}
+footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding:28px 4vw;border-top:1px solid #355775;background:#071626;font-size:12px;letter-spacing:.08em}
+footer span{color:#a8c0d7}
+footer a{color:#90c2ff}
+@media(max-width:900px){.nav{flex-wrap:wrap}.nav nav{width:100%;justify-content:flex-start;flex-wrap:wrap}}
+@media(max-width:750px){.nav{padding:15px 4vw}.nav .logo{font-size:17px}#menu{display:block;margin-left:auto}.nav nav{display:none;flex-direction:column;align-items:stretch;gap:0;width:100%}.nav nav.open{display:flex}.nav nav a{padding:12px 0;border-top:1px solid #294b69}.nav nav .quote{margin-top:10px;padding:12px}.course-hero{padding:50px 5vw}.course-wrap{padding:48px 5vw}.course-card,.course-panel{padding:22px}.syllabus{grid-template-columns:1fr}footer{align-items:flex-start;flex-direction:column}}
+</style>
+  <link href="style.css" rel="stylesheet"/>
+  <style>
+.course-wrap{max-width:1450px;margin:auto;padding:85px 4vw}
+.course-hero{background:linear-gradient(115deg,#08192b,#153553);padding:80px 4vw;border-bottom:1px solid #517597}
+.course-hero h1{max-width:1100px}
+.course-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
+.course-card,.course-panel{border:1px solid #456a8d;padding:35px;background:#0c233a}
+.course-card h3{font-size:2.1rem}
+.course-panel .price{color:#86bdff}
+.syllabus{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.syllabus article{border:1px solid #416182;padding:20px}
+.syllabus b{color:#80b8ff}
+.course-wrap p{color:#b7c9dc}
+.course-wrap ul{line-height:2}
+.course-wrap li::marker{color:#80b8ff}
+@media(max-width:750px){.course-grid,.syllabus{grid-template-columns:1fr}}
+/* Course subject grid: self-contained, does not change existing site components. */
+.btc-subjects{max-width:1180px;margin:0 auto;padding:28px 3vw 60px;color:#edf5ff;font-family:Arial,Helvetica,sans-serif}
+.btc-subjects *{box-sizing:border-box}
+.btc-subjects button{font:inherit}
+.btc-subjects button:focus-visible{outline:3px solid #c8e3ff;outline-offset:2px}
+.btc-subjects .btc-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin:0 0 14px}
+.btc-subjects .btc-head h2{font-size:clamp(24px,3vw,38px);margin:7px 0 0;line-height:1.1}
+.btc-subjects .btc-head p{color:#a9c3dd;font-size:12px;margin:0}
+.btc-subjects .btc-eyebrow{color:#92c4ff;font-size:11px;font-weight:800;letter-spacing:.2em}
+.btc-stage{position:relative;isolation:isolate;overflow:hidden;background:#071626;min-height:1px}
+.btc-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));height:740px;gap:9px}
+.btc-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;text-align:left;min-width:0;min-height:0;padding:13px;gap:3px;overflow:hidden;background:linear-gradient(145deg,#0c233a,#102a43);border:1px solid #365b7b;color:#edf5ff;cursor:pointer;transition:border-color .2s,background .2s,transform .2s}
+.btc-tile:hover{border-color:var(--accent,#77b4ff);background:#153653;transform:translateY(-2px)}
+.btc-tile::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:var(--accent,#77b4ff);opacity:.85}
+.btc-tile::after{content:"";position:absolute;right:-50px;bottom:-85px;width:175px;height:175px;border:1px solid color-mix(in srgb,var(--accent,#77b4ff) 35%,transparent);border-radius:50%;box-shadow:0 0 0 28px rgba(127,182,238,.035),0 0 0 56px rgba(127,182,238,.025);pointer-events:none}
+.btc-tile.btc-wide{grid-column:span 2}
+.btc-tile.btc-tall{grid-row:span 2}
+.btc-tile .btc-num{font-size:10px;letter-spacing:.15em;color:var(--accent,#77b4ff);font-weight:800}
+.btc-tile .btc-symbol{font-size:20px;line-height:1;color:var(--accent,#77b4ff)}
+.btc-tile.btc-wide .btc-symbol,.btc-tile.btc-tall .btc-symbol{font-size:27px}
+.btc-tile h3{font-size:clamp(16px,1.4vw,21px);line-height:1.08;margin:4px 0;color:#f0f6ff}
+.btc-tile.btc-wide h3,.btc-tile.btc-tall h3{font-size:clamp(20px,1.9vw,27px)}
+.btc-tile p{font-size:10.5px;line-height:1.3;margin:0;color:#bed1e5;max-width:340px}
+.btc-tile .btc-bottom{display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:5px;font-size:9px;font-weight:800;letter-spacing:.09em;color:#a6ceff}
+.btc-tile .btc-arrow{font-size:16px}
+.btc-detail{position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;padding:24px;background:linear-gradient(125deg,#102d49,#081b2e);border:1px solid #648db4;scrollbar-color:#608eb7 #102b46}
+.btc-detail[hidden],.btc-grid[hidden]{display:none!important}
+.btc-detail-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.btc-detail h3{font-size:clamp(24px,3vw,36px);line-height:1.12;margin:8px 0 10px;color:#f0f6ff}
+.btc-detail p{color:#b7c9dc;margin:0 0 12px}
+.btc-back{background:transparent;border:1px solid #6086a8;padding:10px 13px;color:#edf5ff;cursor:pointer;white-space:nowrap}
+.btc-back:hover{border-color:#9ec9ff;background:#163a5a}
+.btc-course-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:11px;margin-top:17px}
+.btc-course{border:1px solid #3a6386;border-top:3px solid var(--accent,#77b4ff);background:rgba(7,22,38,.66);padding:16px;min-width:0}
+.btc-course strong{display:block;font-size:16px;color:#f0f6ff;margin-bottom:10px}
+.btc-course .btc-status{display:block;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#9ecaff}
+.btc-course small{display:block;margin-top:10px;color:#b7c9dc;font-size:12px}
+.btc-course a{display:inline-block;margin-top:12px;color:#a8d1ff;text-decoration:underline}
+.btc-grid.btc-out{animation:btcGridOut .22s ease both;pointer-events:none}
+.btc-grid.btc-in{animation:btcGridIn .35s ease both}
+.btc-detail.btc-in{animation:btcDetailIn .38s ease both}
+.btc-detail.btc-out{animation:btcDetailOut .2s ease both;pointer-events:none}
+.btc-detail.btc-in .btc-course{animation:btcCourseIn .38s both}
+.btc-detail.btc-in .btc-course:nth-child(2){animation-delay:.06s}
+.btc-detail.btc-in .btc-course:nth-child(3){animation-delay:.12s}
+@keyframes btcGridOut{to{opacity:0;transform:scale(.975);filter:blur(3px)}}
+@keyframes btcGridIn{from{opacity:0;transform:scale(.975)}to{opacity:1;transform:none}}
+@keyframes btcDetailIn{from{opacity:0;transform:translateY(14px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes btcDetailOut{to{opacity:0;transform:translateY(8px)}}
+@keyframes btcCourseIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:980px){.btc-grid{height:auto;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:minmax(135px,auto)}.btc-tile{min-height:135px}.btc-tile.btc-tall{grid-row:span 1}.btc-tile.btc-wide{grid-column:span 2}}
+@media(max-width:560px){.btc-subjects{padding:22px 14px 40px}.btc-subjects .btc-head{display:block}.btc-subjects .btc-head p{margin-top:8px}.btc-grid{gap:8px;grid-auto-rows:minmax(138px,auto)}.btc-tile{min-height:138px;padding:12px}.btc-tile.btc-wide{min-height:160px}.btc-tile h3{font-size:16px}.btc-tile.btc-wide h3{font-size:20px}.btc-tile p{font-size:11px}.btc-detail{padding:15px}.btc-detail-top{flex-wrap:wrap}.btc-detail h3{font-size:25px}.btc-course-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.btc-grid.btc-out,.btc-grid.btc-in,.btc-detail.btc-in,.btc-detail.btc-out,.btc-detail.btc-in .btc-course{animation:none!important}.btc-tile{transition:none}.btc-tile:hover{transform:none}}
+/* Gap-free Bento mosaic: 12 subject windows occupying every cell of a 4 x 5 grid.
+   Shape belongs to the SLOT, not the subject, so reload randomization stays intact. */
+.btc-grid .btc-feature{grid-area:1 / 1 / 3 / 3}
+.btc-grid .btc-vertical-one{grid-area:1 / 3 / 3 / 4}
+.btc-grid .btc-small-one{grid-area:1 / 4 / 2 / 5}
+.btc-grid .btc-small-two{grid-area:2 / 4 / 3 / 5}
+.btc-grid .btc-horizontal-one{grid-area:3 / 1 / 4 / 3}
+.btc-grid .btc-vertical-two{grid-area:3 / 3 / 5 / 4}
+.btc-grid .btc-small-three{grid-area:3 / 4 / 4 / 5}
+.btc-grid .btc-small-four{grid-area:4 / 1 / 5 / 2}
+.btc-grid .btc-small-five{grid-area:4 / 2 / 5 / 3}
+.btc-grid .btc-vertical-three{grid-area:4 / 4 / 6 / 5}
+.btc-grid .btc-horizontal-two{grid-area:5 / 1 / 6 / 3}
+.btc-grid .btc-small-six{grid-area:5 / 3 / 6 / 4}
+.btc-grid .btc-feature h3{font-size:clamp(22px,2vw,30px)}
+.btc-grid .btc-feature .btc-symbol{font-size:30px}
+.btc-grid .btc-feature,.btc-grid .btc-vertical-one,.btc-grid .btc-vertical-two,.btc-grid .btc-vertical-three{padding:clamp(13px,1.4vw,24px)}
+@media(max-width:980px){
+ .btc-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;grid-auto-rows:minmax(145px,auto);height:auto}
+ .btc-grid .btc-tile{grid-area:auto;grid-column:auto;grid-row:auto;min-height:145px}
+ .btc-grid .btc-feature,.btc-grid .btc-horizontal-one,.btc-grid .btc-horizontal-two{grid-column:span 2}
+ .btc-grid .btc-feature{min-height:220px}
+}
+@media(max-width:560px){
+ .btc-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(155px,auto)}
+ .btc-grid .btc-tile{min-height:155px}
+ .btc-grid .btc-feature{min-height:205px}
+}
+/* V3: full-width sections with consistent responsive side gutters. */
+.course-wrap{width:100%;max-width:none;margin:0;padding:70px clamp(18px,3vw,64px)}
+.btc-subjects{width:100%;max-width:none;margin:0;padding:35px clamp(18px,3vw,64px) 65px}
+.course-hero{padding-left:clamp(18px,3vw,64px);padding-right:clamp(18px,3vw,64px)}
+.course-hero h1{max-width:none}
+.course-grid{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+@media(max-width:750px){
+ .course-wrap{padding:44px 5vw}
+ .btc-subjects{padding:30px 5vw 48px}
+ .course-grid{grid-template-columns:1fr}
+ .course-hero{padding-left:5vw;padding-right:5vw}
+}
+
+/* Unified featured course presentation: one full-width outer card. */
+.btc-featured-shell{
+  margin:clamp(18px,3vw,64px);
+  border:1px solid #527da6;
+  border-top:4px solid #82c4ff;
+  border-radius:16px;
+  background:linear-gradient(135deg,#143653 0%,#0c2942 46%,#0a2037 100%);
+  box-shadow:0 18px 55px rgba(0,0,0,.19),inset 0 1px 0 rgba(255,255,255,.06);
+  overflow:hidden;
+}
+.btc-featured-shell .course-wrap{
+  padding:clamp(24px,3vw,48px);
+}
+.btc-featured-shell .course-wrap + .course-wrap{
+  border-top:1px solid rgba(151,196,235,.28);
+  padding-top:clamp(24px,3vw,40px);
+}
+.btc-featured-shell .course-card,
+.btc-featured-shell .course-panel{
+  background:rgba(4,20,36,.38);
+  border-color:rgba(137,184,225,.32);
+  border-radius:10px;
+}
+.btc-featured-shell .syllabus article{
+  background:rgba(4,20,36,.35);
+  border-color:rgba(137,184,225,.32);
+  border-radius:9px;
+}
+@media(max-width:750px){
+  .btc-featured-shell{margin:18px 5vw;border-radius:12px}
+  .btc-featured-shell .course-wrap{padding:22px 18px}
+  .btc-featured-shell .course-card,
+  .btc-featured-shell .course-panel{padding:20px}
+}
+</style>
+ </head>
+ <body>
+  <header class="nav">
+   <a class="logo" href="index.html">
+    BUILT
+    <span>
+     TO
+    </span>
+    CREATE
+    <small>
+     LOS ANGELES · SOFTWARE · AI · TECHNOLOGY
+    </small>
+   </a>
+   <button aria-expanded="false" aria-label="Toggle navigation" id="menu">
+    ☰
+   </button>
+   <nav id="links">
+      <a href="index.html#engine">The Engine</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#offerings">12 Offerings</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="courses.html" aria-current="page">Courses</a>
+      <a href="index.html#workstation">Workstation</a>
+      <a class="quote" href="index.html#contact">Get a Quote ↗</a>
+    </nav>
+  </header>
+  <main>
+   <section class="course-hero">
+    <p class="eyebrow">
+     TECHNOLOGY EDUCATION · HANDS-ON TRAINING
+    </p>
+    <h1>
+     DON'T JUST USE TECHNOLOGY.
+     <br/>
+     <em>
+      LEARN TO BUILD IT.
+     </em>
+    </h1>
+    <p>
+     Practical workshops grounded in real development work. Build useful skills—and something you can take home.
+    </p>
+    <a class="primary" href="#sql">
+     Explore the SQL workshop ↓
+    </a>
+   </section>
+   <div class="btc-featured-shell">
+   <section class="course-wrap" id="sql">
+    <p class="eyebrow">
+     FEATURED COURSE · BEGINNER
+    </p>
+    <div class="course-grid">
+     <article class="course-card">
+      <h2>
+       INTRODUCTION TO
+       <br/>
+       <em>
+        DATABASES &amp; SQL.
+       </em>
+      </h2>
+      <p class="lead">
+       Don't just learn what a database is. Build one.
+      </p>
+      <p>
+       In four hours, go from understanding tables and records to building and querying your own relational database using PostgreSQL and SQL.
+      </p>
+      <h3>
+       What you'll learn
+      </h3>
+      <ul>
+       <li>
+        What databases are and how applications use them
+       </li>
+       <li>
+        Tables, rows, columns, primary keys and foreign keys
+       </li>
+       <li>
+        Creating tables and adding records
+       </li>
+       <li>
+        SELECT, WHERE, ORDER BY, COUNT, GROUP BY and JOIN
+       </li>
+       <li>
+        Safely updating and deleting records
+       </li>
+       <li>
+        Building a working course-enrollment database
+       </li>
+      </ul>
+      <h3>
+       Your final project
+      </h3>
+      <p>
+       Design and populate a training-company database with students, courses and enrollments. Run queries that answer real business questions and export your SQL scripts.
+      </p>
+     </article>
+     <aside class="course-panel">
+      <p class="eyebrow">
+       WORKSHOP DETAILS
+      </p>
+      <div class="price">
+       $99
+       <span>
+        / student
+       </span>
+      </div>
+      <p>
+       <strong>
+        Duration:
+       </strong>
+       Four hours including two 10-minute breaks
+      </p>
+      <p>
+       <strong>
+        Level:
+       </strong>
+       Beginner
+      </p>
+      <p>
+       <strong>
+        Format:
+       </strong>
+       Guided practical workshop
+      </p>
+      <p>
+       <strong>
+        Tools:
+       </strong>
+       PostgreSQL + SQL editor
+      </p>
+      <p>
+       <strong>
+        Includes:
+       </strong>
+       Sample dataset, SQL scripts, exercises, reference guide and completion acknowledgment
+      </p>
+      <p>
+       <strong>
+        Enrollment:
+       </strong>
+       Proposed course; no dates or checkout are live yet.
+      </p>
+      <a class="primary" href="index.html#contact">
+       Ask About This Course ↗
+      </a>
+     </aside>
+    </div>
+   </section>
+   <section class="course-wrap">
+    <p class="eyebrow">
+     THE FOUR-HOUR PLAN
+    </p>
+    <h2>
+     FROM ZERO TO
+     <br/>
+     <em>
+      WORKING DATABASE.
+     </em>
+    </h2>
+    <div class="syllabus">
+     <article>
+      <b>
+       00:00–00:35
+      </b>
+      <h3>
+       01 / FOUNDATIONS
+      </h3>
+      <p>
+       Understand databases, relational tables and keys.
+      </p>
+     </article>
+     <article>
+      <b>
+       00:35–01:25
+      </b>
+      <h3>
+       02 / BUILD
+      </h3>
+      <p>
+       Create PostgreSQL tables and insert sample data.
+      </p>
+     </article>
+     <article>
+      <b>
+       01:35–02:35
+      </b>
+      <h3>
+       03 / QUERY
+      </h3>
+      <p>
+       Filter, sort, aggregate, update and join records.
+      </p>
+     </article>
+     <article>
+      <b>
+       02:45–04:00
+      </b>
+      <h3>
+       04 / PROJECT
+      </h3>
+      <p>
+       Build, validate and export a small enrollment database.
+      </p>
+     </article>
+    </div>
+    <p>
+     Breaks: 01:25–01:35 and 02:35–02:45.
+    </p>
+   </section>
+   </div>
+  <!-- New section: independent interactive subject grid. -->
+   <section aria-labelledby="btc-subjects-title" class="btc-subjects" id="subjects">
+    <div class="btc-head">
+     <div>
+      <span class="btc-eyebrow">
+       EXPLORE THE DISCIPLINES
+      </span>
+      <h2 id="btc-subjects-title">
+       BROWSE BY SUBJECT.
+      </h2>
+     </div>
+     <p>
+      SELECT A WINDOW TO EXPLORE ↗
+     </p>
+    </div>
+    <div class="btc-stage" id="btc-stage">
+     <div aria-label="Course subject categories" class="btc-grid" id="btc-grid">
+     </div>
+     <section aria-label="Selected subject courses" aria-live="polite" class="btc-detail" hidden="" id="btc-detail">
+      <div class="btc-detail-top">
+       <div>
+        <span class="btc-eyebrow" id="btc-label">
+        </span>
+        <h3 id="btc-title">
+        </h3>
+        <p id="btc-description">
+        </p>
+       </div>
+       <button class="btc-back" id="btc-back" type="button">
+        ← BACK TO SUBJECTS
+       </button>
+      </div>
+      <div class="btc-course-list" id="btc-courses">
+      </div>
+     </section>
+    </div>
+    <p style="color:#9eb8d2;font-size:12px;margin:13px 0 0">
+     Courses marked Planned are future topics. No enrollment or checkout is currently available.
+    </p>
+   </section>
+   <section class="course-wrap" id="ai-workshop" aria-labelledby="ai-workshop-title">
+  <div class="course-card">
+    <p class="eyebrow">FEATURED COURSE · BEGINNER</p>
+    <h2 id="ai-workshop-title">INTRODUCTION TO<br><em>ARTIFICIAL INTELLIGENCE &amp; AI APPLICATIONS.</em></h2>
+    <p class="lead"><strong>Don't just learn what AI is. Build something with it.</strong></p>
+    <p>In four hours, go from understanding artificial intelligence and language models to building and testing a practical AI-powered assistant using Python.</p>
+
+    <h3>What you'll learn</h3>
+    <ul>
+      <li>What artificial intelligence, machine learning and generative AI are</li>
+      <li>How language models and AI assistants work</li>
+      <li>Prompt engineering, context and structured outputs</li>
+      <li>How AI applications process inputs and generate responses</li>
+      <li>Building a practical Python-based assistant</li>
+      <li>Testing AI applications for accuracy, reliability and safety</li>
+    </ul>
+
+    <h3>Your final project</h3>
+    <p>Build and test a Python Study Assistant that accepts questions, processes user input and produces structured responses. The included offline demonstration provider allows students to practice without purchasing API access.</p>
+
+    <h3>WORKSHOP DETAILS</h3>
+    <div class="course-grid">
+      <div class="course-panel">
+        <div class="price">$99 <span>/ student · proposed tuition</span></div>
+        <p><strong>Duration:</strong> Four hours including two 10-minute breaks</p>
+        <p><strong>Level:</strong> Beginner</p>
+        <p><strong>Format:</strong> Guided practical workshop</p>
+        <p><strong>Tools:</strong> Python, VS Code and provided starter application</p>
+        <p><strong>Includes:</strong> Student workbook, starter code, exercises, tests and capstone project</p>
+        <p><strong>Enrollment:</strong> Proposed course; no dates or checkout are live yet.</p>
+        <a class="primary" href="index.html#contact">Ask About This Course ↗</a>
+      </div>
+    </div>
+
+    <h3>THE FOUR-HOUR PLAN</h3>
+    <h2>FROM ZERO TO<br><em>WORKING AI APPLICATION.</em></h2>
+    <div class="syllabus">
+      <article><strong>00:00–00:35</strong><h3>01 / FOUNDATIONS</h3><p>Understand AI, machine learning, language models, capabilities and limitations.</p></article>
+      <article><strong>00:35–01:25</strong><h3>02 / PROMPT &amp; DESIGN</h3><p>Design prompts, explore structured responses and plan an AI application.</p></article>
+      <article><strong>01:35–02:35</strong><h3>03 / BUILD</h3><p>Develop a Python Study Assistant using the provided offline demonstration provider.</p></article>
+      <article><strong>02:45–04:00</strong><h3>04 / PROJECT</h3><p>Complete the assistant, test its responses, handle errors and demonstrate the final project.</p></article>
+    </div>
+    <p>Breaks: 01:25–01:35 and 02:35–02:45.</p>
+
+    <a class="primary" href="COURSES/courses/AI/website/course.html">Open the AI Classroom ↗</a>
+  </div>
+</section>
+</main>
+  <footer>
+   <strong>
+    BUILT TO CREATE
+   </strong>
+   <span>
+    TECHNOLOGY · ENGINEERING · EXPERTISE
+   </span>
+   <a href="index.html">
+    RETURN HOME ↗
+   </a>
+  </footer>
+  <script>
+'use strict';
+const b=document.getElementById('menu'),n=document.getElementById('links');
+b.onclick=()=>{const v=n.classList.toggle('open');b.setAttribute('aria-expanded',String(v));};
+(function(){
+const subjects=[
+{id:'programming',number:'01',name:'Programming & Software',icon:'⌘',summary:'Python, application development, APIs and practical software engineering.',description:'Learn how software works and how to build useful applications from the ground up.',layout:'wide tall',courses:[['Introduction to Python','Planned','Beginner'],['Building Applications with Python','Planned','Intermediate'],['API Development Fundamentals','Planned','Intermediate']]},
+{id:'ai',number:'02',name:'Artificial Intelligence',icon:'✧',summary:'AI assistants, models and practical AI-powered tools.',description:'Explore AI fundamentals and how to incorporate AI into real projects.',layout:'',courses:[['Introduction to Artificial Intelligence & AI Applications','Workshop in development · Enrollment not live','Beginner · 4 hours · Proposed $99'],['Practical AI & Automation','Planned','Beginner–Intermediate'],['Building AI Assistants','Planned','Intermediate']]},
+{id:'data',number:'03',name:'Databases & Data',icon:'▤',summary:'SQL, relational databases, analysis and reporting.',description:'Learn to organize, query and interpret data using practical projects.',layout:'',courses:[['Introduction to Databases & SQL','Existing teaching package · Enrollment not live','Beginner · 4 hours · Proposed $99'],['Data Analysis with Python','Planned','Intermediate']]},
+{id:'web',number:'04',name:'Web Development',icon:'⌗',summary:'HTML, CSS, JavaScript and websites that work on every screen.',description:'Go from web fundamentals to responsive websites and applications.',layout:'wide',courses:[['Build Your First Website','Planned','Beginner'],['JavaScript Fundamentals','Planned','Beginner']]},
+{id:'automation',number:'05',name:'Business Automation',icon:'⤳',summary:'Connect services and design repeatable workflows.',description:'Learn how to identify repetitive work and engineer dependable automation.',layout:'',courses:[['Business Workflow Automation','Planned','Beginner–Intermediate']]},
+{id:'servers',number:'06',name:'Servers & Deployment',icon:'▥',summary:'Linux, hosting, SSH and deploying applications.',description:'Understand the infrastructure behind software and how to publish and maintain it.',layout:'',courses:[['Linux Server Fundamentals','Planned','Beginner'],['Deploying Web Applications','Planned','Intermediate']]},
+{id:'security',number:'07',name:'Security & Testing',icon:'◇',summary:'Software quality, safe development and testing.',description:'Learn practical methods to improve software reliability and security.',layout:'',courses:[['Software Testing Fundamentals','Planned','Beginner']]},
+{id:'foundations',number:'08',name:'Technology Foundations',icon:'⊞',summary:'Computers, developer tools and essential digital skills.',description:'Build the foundation needed to explore software and technical careers.',layout:'',courses:[['Computer & Developer Tools Fundamentals','Planned','Beginner']]},
+{id:'hardware',number:'09',name:'Computer Hardware & Building',icon:'⚙',summary:'PC components, assembly, upgrades and troubleshooting.',description:'Learn how computer hardware fits together and how to build, maintain and diagnose systems.',layout:'',courses:[['Build Your First PC','Planned','Beginner'],['Computer Troubleshooting & Upgrades','Planned','Beginner']]},
+{id:'cloud',number:'10',name:'Cloud & Infrastructure',icon:'☁',summary:'Cloud services, virtual machines and infrastructure basics.',description:'Understand cloud infrastructure and the building blocks of hosted technology.',layout:'',courses:[['Cloud Computing Fundamentals','Planned','Beginner'],['Virtual Machines & Cloud Hosting','Planned','Beginner–Intermediate']]},
+{id:'creative',number:'11',name:'Creative Technology',icon:'✳',summary:'Digital design, media tools and creative workflows.',description:'Explore practical tools for creating digital experiences and media.',layout:'',courses:[['Digital Design Fundamentals','Planned','Beginner'],['Creative Media Production Tools','Planned','Beginner']]},
+{id:'business',number:'12',name:'Technology Entrepreneurship',icon:'↗',summary:'Product planning, launching and running a technology business.',description:'Explore how technical ideas become products, services and sustainable businesses.',layout:'',courses:[['From Idea to Software Product','Planned','Beginner'],['Technology Business Fundamentals','Planned','Beginner']]}
+];
+const colors=['#77b4ff','#56d7cb','#e9a5ff','#ffbe72','#9cce80','#82b5ff','#ff94a4','#b4a5ff','#f7ca75','#8ddce8','#e0a8d4','#a6d28a'];
+// Shuffle subjects while preserving a gap-free 12-window asymmetric Bento mosaic.
+// Each slot is a fixed grid area; only the subject occupying it changes.
+const positions=['feature','vertical-one','small-one','small-two','horizontal-one','vertical-two','small-three','small-four','small-five','vertical-three','horizontal-two','small-six'];
+const shuffled=subjects.slice();
+for(let i=shuffled.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];}
+const grid=document.getElementById('btc-grid'),detail=document.getElementById('btc-detail'),stage=document.getElementById('btc-stage'),list=document.getElementById('btc-courses');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+shuffled.forEach((s,i)=>{const button=document.createElement('button');button.type='button';button.className='btc-tile btc-'+positions[i];button.dataset.subject=s.id;button.style.setProperty('--accent',colors[subjects.findIndex(x=>x.id===s.id)]);button.innerHTML=`<span class="btc-num">SUBJECT / ${esc(s.number)}</span><span class="btc-symbol" aria-hidden="true">${esc(s.icon)}</span><div><h3>${esc(s.name)}</h3><p>${esc(s.summary)}</p></div><span class="btc-bottom"><span>EXPLORE COURSES</span><span class="btc-arrow" aria-hidden="true">↗</span></span>`;grid.append(button);});
+const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+let busy=false,lastButton=null;
+function measure(){stage.style.height=Math.ceil(grid.getBoundingClientRect().height)+'px';}
+function transition(from,to,done){if(busy)return;busy=true;const delay=reduced.matches?0:220;from.classList.add('btc-out');setTimeout(()=>{from.hidden=true;from.classList.remove('btc-out','btc-in');to.hidden=false;to.classList.add('btc-in');done();setTimeout(()=>{to.classList.remove('btc-in');busy=false;},reduced.matches?0:400);},delay);}
+function openSubject(button){if(busy)return;const s=subjects.find(x=>x.id===button.dataset.subject);if(!s)return;lastButton=button;document.getElementById('btc-label').textContent='SUBJECT / '+s.number;document.getElementById('btc-title').textContent=s.name;document.getElementById('btc-description').textContent=s.description;const accent=colors[subjects.findIndex(x=>x.id===s.id)];detail.style.setProperty('--accent',accent);list.replaceChildren();s.courses.forEach(c=>{const article=document.createElement('article');article.className='btc-course';const title=document.createElement('strong');title.textContent=c[0];const status=document.createElement('span');status.className='btc-status';status.textContent=c[1];const info=document.createElement('small');info.textContent=c[2];article.append(title,status,info);if(s.id==='data'&&c[0]==='Introduction to Databases & SQL'){const link=document.createElement('a');link.href='#sql';link.textContent='View featured workshop ↗';article.append(link);}if(s.id==='ai'&&c[0]==='Introduction to Artificial Intelligence & AI Applications'){const link=document.createElement('a');link.href='COURSES/courses/AI/website/course.html';link.textContent='View AI workshop ↗';article.append(link);}list.append(article);});detail.scrollTop=0;measure();transition(grid,detail,()=>document.getElementById('btc-back').focus({preventScroll:true}));}
+grid.addEventListener('click',e=>{const button=e.target.closest('button[data-subject]');if(button)openSubject(button);});
+document.getElementById('btc-back').addEventListener('click',()=>transition(detail,grid,()=>{measure();if(lastButton)lastButton.focus({preventScroll:true});}));
+// Keep the fixed detail window aligned with the actual responsive grid footprint.
+if('ResizeObserver'in window){new ResizeObserver(()=>{if(!busy)measure();}).observe(grid);}
+window.addEventListener('resize',measure);
+requestAnimationFrame(measure);
+})();
+</script>
+ </body>
+</html>
+

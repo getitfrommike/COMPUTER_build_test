@@ -1,0 +1,221 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Classroom | BUILT TO CREATE</title><style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif}*{box-sizing:border-box}body{margin:0;background:#091626;color:#eaf2fc;line-height:1.65}a{color:#9bcaff}header{padding:18px clamp(18px,4vw,55px);background:#0d233a;border-bottom:1px solid #355676;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header strong{letter-spacing:.1em}header a{font-size:14px}.layout{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:calc(100vh - 70px)}aside{padding:26px 16px;background:#0d2034;border-right:1px solid #355676}aside h2{font-size:12px;letter-spacing:.12em;color:#9bcaff;margin:0 10px 18px}.nav-btn{display:block;width:100%;border:1px solid transparent;border-radius:8px;background:transparent;color:#dceafd;text-align:left;padding:13px 12px;font:inherit;cursor:pointer;margin-bottom:6px}.nav-btn:hover,.nav-btn[aria-current=page]{background:#1a3956;border-color:#426a8c}.main{min-width:0;max-width:1050px;width:100%;padding:clamp(22px,4vw,60px);margin:auto}.lesson-label{color:#94c6ff;letter-spacing:.13em;font-size:12px;font-weight:700}h1{font-size:clamp(29px,4vw,48px);line-height:1.16}h2{margin-top:36px;color:#d5e9ff}h3{margin-top:27px}p,li{max-width:80ch}code{background:#1a324b;padding:2px 5px;border-radius:4px;overflow-wrap:anywhere}pre{background:#06111d;padding:18px;overflow-x:auto;border:1px solid #365575;border-radius:8px}pre code{background:none;padding:0}table{border-collapse:collapse;display:block;overflow-x:auto;width:100%}th,td{border:1px solid #43617d;padding:10px;text-align:left}th{background:#18344f}blockquote{border-left:3px solid #86bfff;padding-left:16px;color:#c4d6e9}button:focus-visible,a:focus-visible{outline:3px solid #9bcaff;outline-offset:2px}.resources{margin-top:38px;padding:20px;border:1px solid #3c607f;border-radius:12px;background:#112b43}.resources a{display:inline-block;margin:5px 16px 5px 0}.note{color:#bbcee1;font-size:14px}.controls{display:flex;justify-content:space-between;gap:12px;margin-top:35px}.controls button{padding:11px 18px;border-radius:8px;background:#28547a;color:white;border:1px solid #5d8eb5;cursor:pointer}.controls button:disabled{opacity:.35;cursor:not-allowed}@media(max-width:760px){.layout{display:block}aside{border-right:0;border-bottom:1px solid #355676;padding:12px}.navlist{display:flex;overflow-x:auto;gap:6px}.nav-btn{white-space:nowrap;width:auto;margin:0}.main{padding:22px 18px}}
+</style></head><body><header><strong>BUILT TO CREATE · AI CLASSROOM</strong><a href="../../../../web/courses.html">← Back to Courses</a></header><div class="layout"><aside><h2>COURSE CONTENT</h2><nav class="navlist" aria-label="Course lessons"><button type="button" data-target="start" class="nav-btn">Start Here</button><button type="button" data-target="lessons" class="nav-btn">Student Workbook</button><button type="button" data-target="practice" class="nav-btn">Practice Exercises</button><button type="button" data-target="capstone" class="nav-btn">Capstone Project</button><button type="button" data-target="setup" class="nav-btn">Run the Python App</button></nav><p class="note">4-hour beginner workshop · Self-guided materials</p></aside><main class="main"><section class="panel" id="start" hidden><div class="lesson-label">BUILT TO CREATE · AI COURSE</div><h1>BUILT TO CREATE — Introduction to Artificial Intelligence &amp; AI Applications</h1>
+<p><strong>Level:</strong> Beginner | <strong>Duration:</strong> 4 hours including two 10-minute breaks | <strong>Tuition:</strong> Proposed $99/student</p>
+<p><strong>Promise:</strong> Don't just learn what AI is. Build something with it.</p>
+<h2>Learning outcomes</h2>
+<ol>
+<li>Distinguish AI, machine learning, generative AI, and language models.</li>
+<li>Describe model inputs, outputs, context, and limitations.</li>
+<li>Write and evaluate prompts using explicit requirements.</li>
+<li>Build a small Python AI assistant with a replaceable provider adapter.</li>
+<li>Handle configuration errors, empty inputs, and unsafe data practices.</li>
+<li>Evaluate outputs with a documented test rubric and improve the application.</li>
+</ol>
+<h2>Four-hour schedule</h2>
+<table>
+<thead>
+<tr>
+  <th>Time</th>
+  <th>Module</th>
+  <th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>00:00–00:35</td>
+  <td>01 Foundations</td>
+  <td>Concepts, limitations, responsible use</td>
+</tr>
+<tr>
+  <td>00:35–01:25</td>
+  <td>02 Prompt &amp; Design</td>
+  <td>Prompt structure and test cases</td>
+</tr>
+<tr>
+  <td>01:25–01:35</td>
+  <td>Break</td>
+  <td>10 minutes</td>
+</tr>
+<tr>
+  <td>01:35–02:35</td>
+  <td>03 Build</td>
+  <td>Python assistant, adapter, error handling</td>
+</tr>
+<tr>
+  <td>02:35–02:45</td>
+  <td>Break</td>
+  <td>10 minutes</td>
+</tr>
+<tr>
+  <td>02:45–04:00</td>
+  <td>04 Capstone</td>
+  <td>Test, improve, demonstrate, reflect</td>
+</tr>
+</tbody>
+</table>
+<h2>Prerequisites</h2>
+<p>Laptop with Python 3.10+ and a text editor. No prior AI experience required. The default workshop runs <strong>offline</strong> using a deterministic demonstration adapter. An optional OpenAI-compatible API exercise requires an instructor-approved provider, credentials, network access, and potential usage charges; no paid account is necessary for the core course.</p>
+<h2>Teaching package</h2>
+<ul>
+<li><code>lessons/STUDENT_WORKBOOK.md</code> — concepts, prompts, labs and reflection</li>
+<li><code>exercises/PRACTICE.md</code> — guided exercises</li>
+<li><code>exercises/CAPSTONE.md</code> — final project and scoring rubric</li>
+<li><code>instructor/TEACHING_GUIDE.md</code> — lesson delivery, accommodations, checks</li>
+<li><code>instructor/ANSWER_KEY.md</code> — sample answers and evaluation notes</li>
+<li><code>app/assistant.py</code> — offline runnable starter assistant</li>
+<li><code>app/test_assistant.py</code> — built-in unit tests</li>
+<li><code>app/README.md</code> — installation and execution</li>
+<li><code>website/course.html</code> — standalone course overview</li>
+</ul>
+<h2>Quick start</h2>
+<p>From <code>app/</code>, run <code>python assistant.py</code> and <code>python -m unittest -v</code>.</p>
+<h2>Safety and scope</h2>
+<p>Do not enter private records, credentials, payment information, or confidential client data into third-party AI systems. Treat generated answers as unverified; check factual claims against authoritative sources. This course does not grant an accredited certification. Dates and checkout are not live.</p>
+</section><section class="panel" id="lessons" hidden><div class="lesson-label">BUILT TO CREATE · AI COURSE</div><h1>Student Workbook — Introduction to AI &amp; AI Applications</h1>
+<h2>Course mission</h2>
+<p>Build a simple AI-assistant workflow, understand what an AI model can and cannot establish, and demonstrate testing rather than trusting outputs blindly.</p>
+<h3>Module 01 — Foundations (00:00–00:35)</h3>
+<p><strong>Artificial intelligence:</strong> broad field of systems performing tasks associated with intelligent behavior. <strong>Machine learning:</strong> methods that learn statistical patterns from data. <strong>Generative AI:</strong> models that generate text, images, code, or other content. <strong>Large language model (LLM):</strong> a model trained to predict and generate language-like sequences.</p>
+<p><strong>Key terms:</strong> training, inference, tokens, context window, prompt, hallucination, evaluation, latency, API, privacy.</p>
+<p><strong>Important distinction:</strong> fluent language does not guarantee correctness. A model can be wrong, biased, out of date, or inconsistent. Human verification remains essential for consequential decisions.</p>
+<p><strong>Check:</strong> Give one example each of classification, generation, and retrieval. Why is a generated citation not automatically a real source?</p>
+<h3>Module 02 — Prompt &amp; Design (00:35–01:25)</h3>
+<p>A useful prompt states: (1) role or task, (2) input/context, (3) constraints, (4) desired output format, and (5) what to do when information is missing.</p>
+<p><strong>Weak prompt:</strong> <code>Help me study.</code></p>
+<p><strong>Improved prompt:</strong> <code>Create a 5-question beginner quiz on relational databases. Include answers after the questions. Do not invent sources. If a fact is uncertain, say so.</code></p>
+<p><strong>Lab A:</strong> Draft prompts for summarizing a public paragraph, turning notes into a checklist, and explaining a Python error. Record expected outputs and failure cases.</p>
+<p><strong>Prompt test table:</strong></p>
+<table>
+<thead>
+<tr>
+  <th>Test</th>
+  <th>Input</th>
+  <th>Expected</th>
+  <th>Actual</th>
+  <th>Pass?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>P1</td>
+  <td>Normal request</td>
+  <td>Relevant, readable response</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>P2</td>
+  <td>Empty request</td>
+  <td>Helpful validation error</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>P3</td>
+  <td>Request with sensitive data</td>
+  <td>Warning; avoid sharing externally</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>P4</td>
+  <td>Unknown fact</td>
+  <td>Explicit uncertainty</td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<h3>Module 03 — Build (01:35–02:35)</h3>
+<p><strong>Architecture:</strong> user input → validation → prompt construction → provider adapter → response → human review.</p>
+<p>Open <code>app/assistant.py</code>. The default <code>DemoProvider</code> is <strong>not a real AI model</strong>: it returns deterministic sample responses so every learner can complete the programming exercise offline. This is intentional; never represent demo output as AI inference.</p>
+<p><strong>Lab B:</strong> Run <code>python assistant.py</code>, try <code>help</code>, <code>quiz</code>, and <code>plan</code> requests, and inspect how the input validator rejects blank or oversized requests. Find the adapter interface. Extend the app with one additional response type.</p>
+<p><strong>Optional extension:</strong> Replace the demo adapter with a real provider through a separate adapter that reads an API key from environment variables. Never hard-code keys or print them to logs. Check provider terms, cost, and data policies first.</p>
+<h3>Module 04 — Capstone (02:45–04:00)</h3>
+<p>Build a <strong>Study Assistant</strong> that can create a short learning plan, quiz, or summary from non-sensitive example inputs. At minimum, implement a menu or commands, validate input, handle an error, and document four tests.</p>
+<p><strong>Evaluation:</strong> Does it run? Is the user told when output is simulated? Does it handle empty input? Are claims clearly distinguished from verified facts? Can someone else reproduce your tests?</p>
+<h2>Reflection and take-home</h2>
+<ol>
+<li>What tasks should never be delegated to an unreviewed model?</li>
+<li>What is the difference between a model response and a source-backed answer?</li>
+<li>How would you measure whether your assistant actually helps learners?</li>
+<li>What changes are required to move from a demo adapter to a live AI service?</li>
+</ol>
+<p><strong>Vocabulary check:</strong> AI, ML, LLM, inference, prompt, tokens, context, API, evaluation, privacy, hallucination.</p>
+</section><section class="panel" id="practice" hidden><div class="lesson-label">BUILT TO CREATE · AI COURSE</div><h1>Guided Practice</h1>
+<h2>Exercise 1 — Classify the task (5 min)</h2>
+<p>For each, identify classification, generation, retrieval, or mixed: spam filter; drafting an email; looking up a customer record; summarizing retrieved documentation.</p>
+<h2>Exercise 2 — Improve the prompt (10 min)</h2>
+<p>Rewrite <code>Tell me about computers</code> into a prompt with a named audience, scope, word limit, output structure, and uncertainty instruction. Compare two results or describe expected differences if offline.</p>
+<h2>Exercise 3 — Test the starter app (15 min)</h2>
+<p>From <code>app/</code>: <code>python assistant.py</code> and <code>python -m unittest -v</code>. Try <code>quiz: Python basics</code>, <code>plan: learning SQL</code>, blank input, and a very long input. Document expected vs. actual behavior.</p>
+<h2>Exercise 4 — Add a new mode (15 min)</h2>
+<p>Extend <code>DemoProvider.respond()</code> to support <code>summary:</code> using a transparent template; label the response as simulated. Add a unit test.</p>
+<h2>Exercise 5 — Evaluate reliability (10 min)</h2>
+<p>Write a five-point rubric for accuracy, usefulness, completeness, privacy, and transparency. Explain how you would independently verify a claim from a live model.</p>
+<h2>Instructor note</h2>
+<p>Timing is flexible within modules. No live model or payment is required.</p>
+</section><section class="panel" id="capstone" hidden><div class="lesson-label">BUILT TO CREATE · AI COURSE</div><h1>Capstone — Build a Study Assistant</h1>
+<h2>Scenario</h2>
+<p>A training organization wants a simple assistant for beginners. Create a working Python command-line prototype using the included offline adapter, with an optional live-model adapter only if approved.</p>
+<h2>Required features</h2>
+<ol>
+<li>Accept a topic and a task (<code>plan</code>, <code>quiz</code>, or a custom third task).</li>
+<li>Reject blank inputs and inputs beyond the configured length.</li>
+<li>Show clear instructions and error messages.</li>
+<li>Label simulated responses so users cannot mistake them for live AI output.</li>
+<li>Include at least four automated or documented manual tests.</li>
+<li>Write a short README explaining how to run it and how you would verify outputs.</li>
+</ol>
+<h2>Suggested milestones</h2>
+<ul>
+<li>02:45–03:00: Define users and success criteria.</li>
+<li>03:00–03:30: Implement the assistant and error handling.</li>
+<li>03:30–03:45: Run tests and fix issues.</li>
+<li>03:45–04:00: Demonstrate and reflect.</li>
+</ul>
+<h2>Scoring (100 points)</h2>
+<table>
+<thead>
+<tr>
+  <th>Category</th>
+  <th style="text-align:right">Points</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Functionality and reproducibility</td>
+  <td style="text-align:right">30</td>
+</tr>
+<tr>
+  <td>Input validation and graceful failures</td>
+  <td style="text-align:right">20</td>
+</tr>
+<tr>
+  <td>Evaluation and testing evidence</td>
+  <td style="text-align:right">20</td>
+</tr>
+<tr>
+  <td>Transparency, privacy, and responsible use</td>
+  <td style="text-align:right">20</td>
+</tr>
+<tr>
+  <td>Demonstration and explanation</td>
+  <td style="text-align:right">10</td>
+</tr>
+</tbody>
+</table>
+<h2>Submission</h2>
+<p>Source code, test output, a 1-page design note, and a short demonstration. Completion acknowledgment is educational, not accredited certification.</p>
+</section><section class="panel" id="setup" hidden><div class="lesson-label">BUILT TO CREATE · AI COURSE</div><h1>Offline AI Application Workshop Starter</h1>
+<p>Requires Python 3.10+ and no third-party packages.</p>
+<p>Run from this folder:</p>
+<pre><code class="language-powershell">python assistant.py
+python -m unittest -v
+</code></pre>
+<p>Enter <code>plan: learning SQL</code>, <code>quiz: Python basics</code>, or <code>exit</code>.</p>
+<p><strong>Important:</strong> <code>DemoProvider</code> does not call a real AI model. It demonstrates application architecture using fixed templates. A production AI adapter would require explicit provider configuration, data protection, retries/timeouts, evaluation, and cost controls.</p>
+</section><div class="resources"><strong>Student resources</strong><p class="note">Open the Python source files in your editor to complete the coding labs. These are learning materials, not a live AI service.</p><a href="../app/assistant.py">Python starter application</a><a href="../app/test_assistant.py">Automated tests</a><a href="../app/README.md">App setup guide</a></div><div class="controls"><button id="prev" type="button">← Previous</button><button id="next" type="button">Next lesson →</button></div></main></div><script>
+const ids=['start','lessons','practice','capstone','setup'];const buttons=[...document.querySelectorAll('.nav-btn')];let current=0;function show(index){current=Math.max(0,Math.min(ids.length-1,index));ids.forEach((id,i)=>{document.getElementById(id).hidden=i!==current;buttons[i].setAttribute('aria-current',i===current?'page':'false')});document.getElementById('prev').disabled=current===0;document.getElementById('next').disabled=current===ids.length-1;history.replaceState(null,'','#'+ids[current]);window.scrollTo({top:0,behavior:'instant'})}buttons.forEach((b,i)=>b.addEventListener('click',()=>show(i)));document.getElementById('prev').addEventListener('click',()=>show(current-1));document.getElementById('next').addEventListener('click',()=>show(current+1));show(Math.max(0,ids.indexOf(location.hash.slice(1))));
+</script></body></html>
